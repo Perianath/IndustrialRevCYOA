@@ -1,0 +1,246 @@
+[
+  {
+    "id": "rural-child-01-common-land",
+    "role": "Rural Farmer’s Child",
+    "title": "The Common Land",
+    "text": "Your family has always grazed a few animals on the common land. Now surveyors have arrived with maps and posts. They say the land will soon be fenced.",
+    "historyNote": "Common land was land that local people could use for grazing animals, collecting wood or growing small amounts of food.",
+    "glossaryTerms": ["common land", "enclosure", "rural"],
+    "evidence": ["Common land helped poor rural families survive before enclosure changed village life."],
+    "choices": [
+      {
+        "label": "Help your family move the animals before the fences go up.",
+        "next": "rural-child-02-enclosure",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Ask why local families are losing access to the land.",
+        "next": "rural-child-02-enclosure",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 0, "reform": 1 }
+      },
+      {
+        "label": "Join neighbours at a village meeting.",
+        "next": "rural-child-03-village-meeting",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 1 }
+      }
+    ]
+  },
+  {
+    "id": "rural-child-02-enclosure",
+    "role": "Rural Farmer’s Child",
+    "title": "Fences Across the Fields",
+    "text": "The new fences cut across paths your family has used for years. A landowner says enclosure will make farming more efficient. Your parents worry about rent and food.",
+    "historyNote": "Enclosure turned shared or open fields into private farms. It could improve farming, but many poor families lost important resources.",
+    "glossaryTerms": ["enclosure", "landowner", "private property"],
+    "evidence": ["Enclosure helped some landowners increase production but made life harder for many rural poor."],
+    "choices": [
+      {
+        "label": "Look for paid work on the enclosed farm.",
+        "next": "rural-child-04-new-farming",
+        "effects": { "money": 1, "health": 0, "skills": 1, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Collect firewood before access is blocked.",
+        "next": "rural-child-05-rural-poverty",
+        "effects": { "money": 0, "health": 1, "skills": 0, "reputation": 0, "reform": 0 }
+      },
+      {
+        "label": "Write down how enclosure affects your family.",
+        "next": "rural-child-03-village-meeting",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "rural-child-03-village-meeting",
+    "role": "Rural Farmer’s Child",
+    "title": "The Village Meeting",
+    "text": "Families crowd into the parish room. Some want to petition the landowner. Others say there is no point arguing with people who own the land.",
+    "historyNote": "Rural people sometimes protested enclosure through petitions, meetings or direct action. Not all protests succeeded.",
+    "glossaryTerms": ["petition", "protest", "parish"],
+    "evidence": ["Rural communities used meetings and petitions to respond to changes that threatened their survival."],
+    "choices": [
+      {
+        "label": "Sign a petition asking for fair access to land.",
+        "next": "rural-child-06-crop-rotation",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 2, "reform": 2 }
+      },
+      {
+        "label": "Stay quiet because your family needs work.",
+        "next": "rural-child-05-rural-poverty",
+        "effects": { "money": 1, "health": 0, "skills": 0, "reputation": 0, "reform": 0 }
+      },
+      {
+        "label": "Ask whether new farming methods could create work.",
+        "next": "rural-child-04-new-farming",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 0 }
+      }
+    ]
+  },
+  {
+    "id": "rural-child-04-new-farming",
+    "role": "Rural Farmer’s Child",
+    "title": "New Farming Methods",
+    "text": "A farmer shows you neat rows of crops, better tools and stronger animals. He says farming is becoming more scientific, but fewer labourers may be needed.",
+    "historyNote": "Agricultural change included better tools, selective breeding and more organised farming. These changes helped increase food production.",
+    "glossaryTerms": ["agricultural change", "selective breeding", "labourer"],
+    "evidence": ["Agricultural change increased food production but could reduce the need for rural workers."],
+    "choices": [
+      {
+        "label": "Learn the new tools and prove you can adapt.",
+        "next": "rural-child-06-crop-rotation",
+        "effects": { "money": 1, "health": 0, "skills": 2, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Ask what happens to families who lose farm work.",
+        "next": "rural-child-05-rural-poverty",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 0, "reform": 1 }
+      },
+      {
+        "label": "Think about leaving for a factory town.",
+        "next": "rural-child-07-rumours-of-manchester",
+        "effects": { "money": 0, "health": 0, "skills": 0, "reputation": 0, "reform": 0 }
+      }
+    ]
+  },
+  {
+    "id": "rural-child-05-rural-poverty",
+    "role": "Rural Farmer’s Child",
+    "title": "Hard Times at Home",
+    "text": "Food is harder to stretch. Your family has less land to use, fewer animals and less steady work. A neighbour says Manchester mills are hiring.",
+    "historyNote": "Rural poverty pushed some families to search for work in growing industrial towns. Migration was often a difficult choice.",
+    "glossaryTerms": ["rural poverty", "migration", "wages"],
+    "evidence": ["Rural poverty was one reason families migrated to industrial cities."],
+    "choices": [
+      {
+        "label": "Stay and search for seasonal farm work.",
+        "next": "rural-child-06-crop-rotation",
+        "effects": { "money": 1, "health": 0, "skills": 1, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Ask your family to consider Manchester.",
+        "next": "rural-child-07-rumours-of-manchester",
+        "effects": { "money": 0, "health": 0, "skills": 0, "reputation": 0, "reform": 0 }
+      },
+      {
+        "label": "Record how enclosure has changed your life.",
+        "next": "rural-child-09-city-streets",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "rural-child-06-crop-rotation",
+    "role": "Rural Farmer’s Child",
+    "title": "Crop Rotation",
+    "text": "You learn that farmers can grow different crops in a planned order. Turnips and clover help restore the soil and feed animals through winter.",
+    "historyNote": "Crop rotation improved soil quality and food production. It was an important part of agricultural change before and during industrialisation.",
+    "glossaryTerms": ["crop rotation", "soil", "turnips"],
+    "evidence": ["Crop rotation helped farms produce more food for Britain's growing population."],
+    "choices": [
+      {
+        "label": "Practise the new farming methods.",
+        "next": "rural-child-10-ending",
+        "effects": { "money": 1, "health": 1, "skills": 2, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Ask why better farming still leaves families poor.",
+        "next": "rural-child-08-road-to-manchester",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 0, "reform": 1 }
+      },
+      {
+        "label": "Compare farm change with factory change.",
+        "next": "rural-child-07-rumours-of-manchester",
+        "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 0, "reform": 0 }
+      }
+    ]
+  },
+  {
+    "id": "rural-child-07-rumours-of-manchester",
+    "role": "Rural Farmer’s Child",
+    "title": "Rumours of Manchester",
+    "text": "A cousin writes from Manchester. The mills need workers, but the city is smoky and crowded. Your family must decide whether wages are worth the risk.",
+    "historyNote": "Manchester became one of Britain's major industrial cities. Many migrants went there for textile factory work.",
+    "glossaryTerms": ["Manchester", "cotton mill", "migration"],
+    "evidence": ["Manchester attracted rural migrants because cotton mills offered paid work."],
+    "choices": [
+      {
+        "label": "Pack your belongings and leave for Manchester.",
+        "next": "rural-child-08-road-to-manchester",
+        "effects": { "money": 0, "health": -1, "skills": 0, "reputation": 0, "reform": 0 }
+      },
+      {
+        "label": "Stay one more season and save money first.",
+        "next": "rural-child-06-crop-rotation",
+        "effects": { "money": 1, "health": 0, "skills": 1, "reputation": 0, "reform": 0 }
+      },
+      {
+        "label": "Ask travellers what city life is really like.",
+        "next": "rural-child-09-city-streets",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 0, "reform": 1 }
+      }
+    ]
+  },
+  {
+    "id": "rural-child-08-road-to-manchester",
+    "role": "Rural Farmer’s Child",
+    "title": "The Road to Manchester",
+    "text": "You walk with bundles tied in cloth. Other families travel the same road. Behind you are fields and fences. Ahead are chimneys and factory bells.",
+    "historyNote": "Migration from rural areas to cities was part of urbanisation. People moved for wages, but often faced crowded housing and poor health conditions.",
+    "glossaryTerms": ["migration", "urbanisation", "factory town"],
+    "evidence": ["Migration linked rural change to the growth of industrial cities."],
+    "choices": [
+      {
+        "label": "Look for work as soon as you arrive.",
+        "next": "rural-child-09-city-streets",
+        "effects": { "money": 1, "health": -1, "skills": 0, "reputation": 0, "reform": 0 }
+      },
+      {
+        "label": "Search for safer lodging before work.",
+        "next": "rural-child-09-city-streets",
+        "effects": { "money": -1, "health": 1, "skills": 0, "reputation": 0, "reform": 0 }
+      },
+      {
+        "label": "Write a letter home about the journey.",
+        "next": "rural-child-10-ending",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 1 }
+      }
+    ]
+  },
+  {
+    "id": "rural-child-09-city-streets",
+    "role": "Rural Farmer’s Child",
+    "title": "City Streets",
+    "text": "Manchester is larger than any village you have known. Streets are crowded, smoke darkens the sky, and families live close to the mills.",
+    "historyNote": "Urbanisation created large industrial cities. These cities offered work but often had overcrowding, pollution and poor sanitation.",
+    "glossaryTerms": ["urbanisation", "pollution", "sanitation"],
+    "evidence": ["Industrial cities offered wages but also brought crowding, pollution and public health problems."],
+    "choices": [
+      {
+        "label": "Take factory work to support your family.",
+        "next": "rural-child-10-ending",
+        "effects": { "money": 2, "health": -1, "skills": 0, "reputation": 0, "reform": 0 }
+      },
+      {
+        "label": "Find other migrants and share advice.",
+        "next": "rural-child-10-ending",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 2, "reform": 1 }
+      },
+      {
+        "label": "Speak up about housing and clean water.",
+        "next": "rural-child-10-ending",
+        "effects": { "money": 0, "health": 1, "skills": 1, "reputation": 1, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "rural-child-10-ending",
+    "role": "Rural Farmer’s Child",
+    "title": "Ending: From Fields to Factory Towns",
+    "text": "Your story shows how rural life changed during the Industrial Revolution. Enclosure and new farming methods increased production, but many poor families lost security. Some stayed on farms, while others migrated to Manchester and became part of urban industrial life.",
+    "historyNote": "The Rural Farmer's Child pathway connects agricultural change to urbanisation. It shows that industrialisation began in the countryside as well as in factories.",
+    "glossaryTerms": ["enclosure", "agricultural change", "urbanisation"],
+    "evidence": ["Agricultural change helped feed industrial Britain but also pushed some rural families toward city life."],
+    "choices": []
+  }
+]

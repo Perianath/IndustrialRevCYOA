@@ -1,0 +1,246 @@
+[
+  {
+    "id": "factory-child-01-mill-bell",
+    "role": "Factory Child",
+    "title": "The Mill Bell",
+    "text": "The bell rings before sunrise. You hurry through the mill gate with other children. The cotton mill is already loud, warm and full of dust.",
+    "historyNote": "Many children worked in cotton mills during the Industrial Revolution. Their wages helped poor families, but the work was tiring and dangerous.",
+    "glossaryTerms": ["child labour", "cotton mill", "Industrial Revolution"],
+    "evidence": ["Children worked in factories because many families needed their wages to survive."],
+    "choices": [
+      {
+        "label": "Run inside quickly so you are not fined.",
+        "next": "factory-child-02-long-hours",
+        "effects": { "money": 1, "health": -1, "skills": 0, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Help a younger child find their work station.",
+        "next": "factory-child-02-long-hours",
+        "effects": { "money": 0, "health": 0, "skills": 0, "reputation": 2, "reform": 1 }
+      },
+      {
+        "label": "Ask an older worker what dangers to watch for.",
+        "next": "factory-child-03-machines",
+        "effects": { "money": 0, "health": 1, "skills": 1, "reputation": 1, "reform": 0 }
+      }
+    ]
+  },
+  {
+    "id": "factory-child-02-long-hours",
+    "role": "Factory Child",
+    "title": "A Very Long Shift",
+    "text": "You work for hours before breakfast. The overseer says the machines must keep moving. Your legs ache, but stopping could cost your family money.",
+    "historyNote": "Factory children often worked long days. Early factory work had few rules about hours, breaks or safety.",
+    "glossaryTerms": ["long hours", "overseer", "wages"],
+    "evidence": ["Long factory hours made children tired and increased the risk of mistakes and injury."],
+    "choices": [
+      {
+        "label": "Push through the tiredness and keep working.",
+        "next": "factory-child-03-machines",
+        "effects": { "money": 2, "health": -2, "skills": 0, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Quietly slow down so you do not make a mistake.",
+        "next": "factory-child-03-machines",
+        "effects": { "money": -1, "health": 1, "skills": 1, "reputation": -1, "reform": 1 }
+      },
+      {
+        "label": "Tell a worker that children need shorter hours.",
+        "next": "factory-child-06-reformer-visit",
+        "effects": { "money": 0, "health": 0, "skills": 0, "reputation": 1, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "factory-child-03-machines",
+    "role": "Factory Child",
+    "title": "The Textile Machines",
+    "text": "Rows of spinning frames and power looms clatter around you. They turn raw cotton into thread and cloth much faster than hand workers could.",
+    "historyNote": "Textile machines helped make cotton cloth faster and cheaper. They also changed how people worked by bringing workers into factories.",
+    "glossaryTerms": ["textile machines", "spinning frame", "power loom"],
+    "evidence": ["Textile machines increased production, but they made factory work fast, noisy and dangerous."],
+    "choices": [
+      {
+        "label": "Learn how the spinning frame works.",
+        "next": "factory-child-04-cotton-dust",
+        "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Reach under a moving machine to clear cotton waste.",
+        "next": "factory-child-05-injury",
+        "effects": { "money": 2, "health": -2, "skills": 0, "reputation": 0, "reform": 0 }
+      },
+      {
+        "label": "Warn another child to keep clear of the rollers.",
+        "next": "factory-child-05-injury",
+        "effects": { "money": 0, "health": 1, "skills": 1, "reputation": 2, "reform": 1 }
+      }
+    ]
+  },
+  {
+    "id": "factory-child-04-cotton-dust",
+    "role": "Factory Child",
+    "title": "Cotton Dust in the Air",
+    "text": "Fluffy cotton dust floats in the warm air. By afternoon, your throat feels rough and your eyes sting. The windows stay shut to keep the thread from snapping.",
+    "historyNote": "Cotton mills were often hot, humid and dusty. Poor air quality could damage workers' health over time.",
+    "glossaryTerms": ["cotton", "mill", "working conditions"],
+    "evidence": ["Cotton mills could harm workers' health because the air was dusty and the rooms were poorly ventilated."],
+    "choices": [
+      {
+        "label": "Keep working near the machines.",
+        "next": "factory-child-05-injury",
+        "effects": { "money": 2, "health": -1, "skills": 0, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Ask if a window can be opened.",
+        "next": "factory-child-06-reformer-visit",
+        "effects": { "money": -1, "health": 1, "skills": 0, "reputation": -1, "reform": 1 }
+      },
+      {
+        "label": "Write down how the air affects workers.",
+        "next": "factory-child-06-reformer-visit",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "factory-child-05-injury",
+    "role": "Factory Child",
+    "title": "A Dangerous Moment",
+    "text": "A child's sleeve catches near the rollers. The machine does not stop by itself. Everyone freezes for a second because stopping work can bring punishment.",
+    "historyNote": "Factory injuries were a serious problem. Children were at risk because they worked close to fast-moving machines.",
+    "glossaryTerms": ["injury", "rollers", "factory safety"],
+    "evidence": ["Moving textile machines could seriously injure children who worked too close to them."],
+    "choices": [
+      {
+        "label": "Pull the stop lever straight away.",
+        "next": "factory-child-07-inspector",
+        "effects": { "money": -1, "health": 2, "skills": 0, "reputation": 2, "reform": 2 }
+      },
+      {
+        "label": "Call for the overseer before touching anything.",
+        "next": "factory-child-07-inspector",
+        "effects": { "money": 0, "health": -1, "skills": 0, "reputation": 0, "reform": 0 }
+      },
+      {
+        "label": "Remember every detail for the reformers.",
+        "next": "factory-child-06-reformer-visit",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "factory-child-06-reformer-visit",
+    "role": "Factory Child",
+    "title": "Questions from a Reformer",
+    "text": "A reformer waits near the mill gate. She asks about your hours, your pay and whether children are hurt inside the mill.",
+    "historyNote": "Reformers collected evidence about factory conditions. They used reports, speeches and petitions to push for better laws.",
+    "glossaryTerms": ["reformer", "petition", "evidence"],
+    "evidence": ["Reformers used workers' stories as evidence to argue for safer factories and shorter hours."],
+    "choices": [
+      {
+        "label": "Tell the reformer the truth about the mill.",
+        "next": "factory-child-07-inspector",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 2, "reform": 3 }
+      },
+      {
+        "label": "Stay quiet because you fear losing your job.",
+        "next": "factory-child-08-family-wages",
+        "effects": { "money": 1, "health": 0, "skills": 0, "reputation": 0, "reform": 0 }
+      },
+      {
+        "label": "Give information but ask not to be named.",
+        "next": "factory-child-07-inspector",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "factory-child-07-inspector",
+    "role": "Factory Child",
+    "title": "The Factory Inspector",
+    "text": "An inspector visits the mill. The owner wants the factory to look orderly. Workers whisper that inspectors can help enforce new rules.",
+    "historyNote": "Factory inspectors checked whether factories followed laws. Early Factory Acts tried to limit child labour and working hours.",
+    "glossaryTerms": ["Factory Acts", "factory inspector", "law"],
+    "evidence": ["Factory Acts showed that the government began to set rules for child labour and factory conditions."],
+    "choices": [
+      {
+        "label": "Answer the inspector honestly.",
+        "next": "factory-child-09-factory-acts",
+        "effects": { "money": -1, "health": 0, "skills": 1, "reputation": 2, "reform": 3 }
+      },
+      {
+        "label": "Say only what the owner wants to hear.",
+        "next": "factory-child-08-family-wages",
+        "effects": { "money": 2, "health": -1, "skills": 0, "reputation": -1, "reform": -1 }
+      },
+      {
+        "label": "Show the inspector where the accident happened.",
+        "next": "factory-child-09-factory-acts",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 2, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "factory-child-08-family-wages",
+    "role": "Factory Child",
+    "title": "Wages at Home",
+    "text": "At night, you bring your wages home. Your family needs the money for rent and food. You wonder how change can happen without hurting families like yours.",
+    "historyNote": "Child labour was linked to poverty. Many families relied on children's wages, so reform had to consider how families would survive.",
+    "glossaryTerms": ["wages", "poverty", "child labour"],
+    "evidence": ["Children's factory wages helped families survive, which made child labour a difficult problem to solve."],
+    "choices": [
+      {
+        "label": "Keep working and hope conditions improve.",
+        "next": "factory-child-10-ending",
+        "effects": { "money": 2, "health": -1, "skills": 0, "reputation": 0, "reform": 0 }
+      },
+      {
+        "label": "Support shorter hours for children.",
+        "next": "factory-child-09-factory-acts",
+        "effects": { "money": -1, "health": 1, "skills": 0, "reputation": 1, "reform": 2 }
+      },
+      {
+        "label": "Ask if schooling could help children find better work later.",
+        "next": "factory-child-09-factory-acts",
+        "effects": { "money": -1, "health": 0, "skills": 2, "reputation": 1, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "factory-child-09-factory-acts",
+    "role": "Factory Child",
+    "title": "News of the Factory Acts",
+    "text": "News spreads that laws may limit the hours children can work. Some workers feel hopeful. Some owners complain that new rules will reduce profits.",
+    "historyNote": "Factory Acts were laws passed in Britain to improve factory conditions. They gradually limited child labour, reduced hours and increased inspection.",
+    "glossaryTerms": ["Factory Acts", "reform", "inspection"],
+    "evidence": ["Factory Acts were a response to evidence about long hours, child labour and dangerous workplaces."],
+    "choices": [
+      {
+        "label": "Support the new rules because children need protection.",
+        "next": "factory-child-10-ending",
+        "effects": { "money": -1, "health": 2, "skills": 0, "reputation": 2, "reform": 3 }
+      },
+      {
+        "label": "Worry that your family will lose needed wages.",
+        "next": "factory-child-10-ending",
+        "effects": { "money": 1, "health": 0, "skills": 0, "reputation": 0, "reform": 0 }
+      },
+      {
+        "label": "Argue that reform should include schooling and family support.",
+        "next": "factory-child-10-ending",
+        "effects": { "money": 0, "health": 1, "skills": 2, "reputation": 2, "reform": 3 }
+      }
+    ]
+  },
+  {
+    "id": "factory-child-10-ending",
+    "role": "Factory Child",
+    "title": "Ending: Life Beside the Machines",
+    "text": "Your story shows why the Industrial Revolution was complicated. Cotton mills created wages and cheap cloth, but factory children faced long hours, dust, danger and injury. Reformers and Factory Acts slowly pushed for change.",
+    "historyNote": "The Factory Child pathway shows both economic benefits and human costs. It helps explain why many historians describe the Industrial Revolution as mixed.",
+    "glossaryTerms": ["Industrial Revolution", "child labour", "Factory Acts"],
+    "evidence": ["Factory children experienced the benefits of wages and the harms of unsafe, exhausting work."],
+    "choices": []
+  }
+]

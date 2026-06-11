@@ -1,0 +1,246 @@
+[
+  {
+    "id": "reformer-01-print-shop",
+    "role": "Young Reformer",
+    "title": "Above the Print Shop",
+    "text": "You meet reformers in a room above a print shop. They want to improve factory life and city health, but they need strong evidence before people will listen.",
+    "historyNote": "Reformers used pamphlets, newspapers, petitions and public meetings to spread ideas and pressure leaders.",
+    "glossaryTerms": ["reformer", "evidence", "petition"],
+    "evidence": ["Reform movements needed evidence and public support to challenge industrial problems."],
+    "choices": [
+      {
+        "label": "Visit a factory to gather evidence.",
+        "next": "reformer-02-factory-evidence",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+      },
+      {
+        "label": "Walk through crowded city streets.",
+        "next": "reformer-03-city-sanitation",
+        "effects": { "money": 0, "health": -1, "skills": 1, "reputation": 0, "reform": 1 }
+      },
+      {
+        "label": "Help prepare a petition.",
+        "next": "reformer-04-petition",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "reformer-02-factory-evidence",
+    "role": "Young Reformer",
+    "title": "Inside the Factory",
+    "text": "The factory is loud and dusty. Children work close to moving machines. You note their ages, hours and the injuries workers describe.",
+    "historyNote": "Evidence about child labour, long hours and injuries helped reformers argue for factory laws.",
+    "glossaryTerms": ["child labour", "factory reform", "testimony"],
+    "evidence": ["Factory evidence showed that children could face long hours, danger and poor health at work."],
+    "choices": [
+      {
+        "label": "Record workers' words exactly.",
+        "next": "reformer-05-report-writing",
+        "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 2, "reform": 2 }
+      },
+      {
+        "label": "Add dramatic details to make the story stronger.",
+        "next": "reformer-05-report-writing",
+        "effects": { "money": 0, "health": 0, "skills": 0, "reputation": -1, "reform": 1 }
+      },
+      {
+        "label": "Ask workers if they belong to a union.",
+        "next": "reformer-06-unions",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "reformer-03-city-sanitation",
+    "role": "Young Reformer",
+    "title": "The Dirty Pump",
+    "text": "In a narrow street, families share one water pump. Waste runs near the gutter. A mother says sickness spreads quickly in the crowded houses.",
+    "historyNote": "Industrial cities often grew faster than clean water, drains and housing. Poor sanitation helped diseases spread.",
+    "glossaryTerms": ["sanitation", "public health", "urbanisation"],
+    "evidence": ["Poor city sanitation made disease more likely in crowded industrial towns."],
+    "choices": [
+      {
+        "label": "Map the street and note where waste collects.",
+        "next": "reformer-07-public-health",
+        "effects": { "money": 0, "health": -1, "skills": 2, "reputation": 1, "reform": 2 }
+      },
+      {
+        "label": "Interview families about sickness.",
+        "next": "reformer-05-report-writing",
+        "effects": { "money": 0, "health": -1, "skills": 1, "reputation": 2, "reform": 2 }
+      },
+      {
+        "label": "Ask the town council for cleaner water.",
+        "next": "reformer-07-public-health",
+        "effects": { "money": 0, "health": 0, "skills": 0, "reputation": 1, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "reformer-04-petition",
+    "role": "Young Reformer",
+    "title": "The Petition",
+    "text": "You carry a petition through markets and streets. Some people sign quickly. Others fear angering factory owners or losing work.",
+    "historyNote": "Petitions let ordinary people ask Parliament or local leaders for change. They were an important tool for reform campaigns.",
+    "glossaryTerms": ["petition", "Parliament", "campaign"],
+    "evidence": ["Petitions showed that many people supported reform, even if they had little political power."],
+    "choices": [
+      {
+        "label": "Collect signatures outside the factory gate.",
+        "next": "reformer-06-unions",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+      },
+      {
+        "label": "Speak politely with shopkeepers and families.",
+        "next": "reformer-05-report-writing",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 2, "reform": 1 }
+      },
+      {
+        "label": "Take the petition to a local Member of Parliament.",
+        "next": "reformer-08-parliament",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "reformer-05-report-writing",
+    "role": "Young Reformer",
+    "title": "Writing the Report",
+    "text": "Your notes cover factory injuries, child labour, dirty streets and sickness. You must turn them into a clear report that people can trust.",
+    "historyNote": "Reports and inquiries helped turn personal experiences into public evidence for reform.",
+    "glossaryTerms": ["report", "inquiry", "evidence"],
+    "evidence": ["Careful evidence made reform arguments stronger and harder to ignore."],
+    "choices": [
+      {
+        "label": "Use exact testimony and clear facts.",
+        "next": "reformer-08-parliament",
+        "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 2, "reform": 2 }
+      },
+      {
+        "label": "Print a short version for workers to read.",
+        "next": "reformer-09-public-meeting",
+        "effects": { "money": -1, "health": 0, "skills": 1, "reputation": 2, "reform": 2 }
+      },
+      {
+        "label": "Add maps showing dirty water and crowded streets.",
+        "next": "reformer-07-public-health",
+        "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 1, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "reformer-06-unions",
+    "role": "Young Reformer",
+    "title": "Workers Organise",
+    "text": "Workers meet after dark to discuss wages, hours and safety. They talk about joining together so owners must listen.",
+    "historyNote": "Unions grew as workers organised to improve pay and conditions. Early unions often faced suspicion or legal limits.",
+    "glossaryTerms": ["union", "wages", "working conditions"],
+    "evidence": ["Unions helped workers act together instead of facing factory owners alone."],
+    "choices": [
+      {
+        "label": "Listen and record their main concerns.",
+        "next": "reformer-05-report-writing",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 2, "reform": 2 }
+      },
+      {
+        "label": "Encourage peaceful organisation.",
+        "next": "reformer-09-public-meeting",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+      },
+      {
+        "label": "Warn them that owners may punish protest.",
+        "next": "reformer-08-parliament",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 1 }
+      }
+    ]
+  },
+  {
+    "id": "reformer-07-public-health",
+    "role": "Young Reformer",
+    "title": "Public Health",
+    "text": "A doctor explains that dirty water and poor drains spread disease. You realise factory reform is not enough if workers return to unsafe streets.",
+    "historyNote": "Public health reform focused on clean water, drains, housing and disease prevention in growing towns.",
+    "glossaryTerms": ["public health", "disease", "drainage"],
+    "evidence": ["Public health reform showed that industrial cities needed clean water, drains and better housing."],
+    "choices": [
+      {
+        "label": "Campaign for drains and clean water.",
+        "next": "reformer-09-public-meeting",
+        "effects": { "money": 0, "health": 1, "skills": 1, "reputation": 2, "reform": 3 }
+      },
+      {
+        "label": "Send your sanitation evidence to Parliament.",
+        "next": "reformer-08-parliament",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+      },
+      {
+        "label": "Compare factory injuries with city sickness.",
+        "next": "reformer-05-report-writing",
+        "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 1, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "reformer-08-parliament",
+    "role": "Young Reformer",
+    "title": "News from Parliament",
+    "text": "A Member of Parliament reads your evidence. Some leaders support reform. Others say too many laws will hurt business.",
+    "historyNote": "Parliament debated how much the government should regulate factories and cities. Reform often happened slowly.",
+    "glossaryTerms": ["Parliament", "regulation", "reform"],
+    "evidence": ["Parliamentary debate shaped laws about factories, workers and public health."],
+    "choices": [
+      {
+        "label": "Argue for stronger Factory Acts.",
+        "next": "reformer-10-factory-acts-ending",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 2, "reform": 3 }
+      },
+      {
+        "label": "Argue that public health must be included.",
+        "next": "reformer-09-public-meeting",
+        "effects": { "money": 0, "health": 1, "skills": 1, "reputation": 2, "reform": 2 }
+      },
+      {
+        "label": "Seek support from unions and families first.",
+        "next": "reformer-09-public-meeting",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "reformer-09-public-meeting",
+    "role": "Young Reformer",
+    "title": "The Public Meeting",
+    "text": "The hall is packed with workers, parents, shopkeepers and doctors. You speak about factory injuries, child labour, petitions and dirty streets.",
+    "historyNote": "Public meetings helped build pressure for reform by spreading evidence and gathering support.",
+    "glossaryTerms": ["public meeting", "public opinion", "reform"],
+    "evidence": ["Public meetings helped turn local problems into wider reform campaigns."],
+    "choices": [
+      {
+        "label": "Call for limits on child labour.",
+        "next": "reformer-10-factory-acts-ending",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 2, "reform": 3 }
+      },
+      {
+        "label": "Call for clean water and city sanitation.",
+        "next": "reformer-10-factory-acts-ending",
+        "effects": { "money": 0, "health": 1, "skills": 1, "reputation": 2, "reform": 3 }
+      },
+      {
+        "label": "Call for unions, petitions and Parliament to work together.",
+        "next": "reformer-10-factory-acts-ending",
+        "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 2, "reform": 3 }
+      }
+    ]
+  },
+  {
+    "id": "reformer-10-factory-acts-ending",
+    "role": "Young Reformer",
+    "title": "Ending: Reform Takes Time",
+    "text": "Your work helps show why reform mattered. Evidence, petitions, unions, public meetings and Parliament all played a part. Factory Acts and public health reforms did not fix everything at once, but they began to change industrial Britain.",
+    "historyNote": "Factory Acts gradually limited child labour and improved inspection. Public health reforms later improved sanitation, clean water and city planning.",
+    "glossaryTerms": ["Factory Acts", "public health", "sanitation"],
+    "evidence": ["Reform during the Industrial Revolution grew from evidence, public pressure, worker organisation and government action."],
+    "choices": []
+  }
+]
