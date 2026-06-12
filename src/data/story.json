@@ -1,0 +1,954 @@
+{
+  "startScene": "shared-opening",
+  "finalReflection": "final-reflection",
+  "scenes": [
+    {
+      "id": "shared-opening",
+      "role": "shared",
+      "title": "Smoke Over Britain",
+      "text": "It is the 1830s. Smoke rises above new factory towns. Farms are changing, machines are spreading, and people are moving for work. Your choices will show how the Industrial Revolution changed different lives.",
+      "historyNote": "The Industrial Revolution was a period of major change. Britain shifted from mostly rural work and hand production to factories, machines, coal power and growing cities.",
+      "glossaryTerms": ["Industrial Revolution", "factory", "urbanisation"],
+      "evidence": ["The Industrial Revolution affected people differently depending on their class, job and location."],
+      "choices": [
+        {
+          "label": "Follow a child entering a cotton factory.",
+          "next": "factory-01-bell",
+          "effects": { "money": 1, "health": -1, "skills": 0, "reputation": 0, "reform": 0 }
+        },
+        {
+          "label": "Follow a farm child facing enclosure.",
+          "next": "rural-01-fences",
+          "effects": { "money": -1, "health": 1, "skills": 0, "reputation": 0, "reform": 0 }
+        },
+        {
+          "label": "Look for another viewpoint in the changing world.",
+          "next": "shared-crossroads",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 0, "reform": 0 }
+        }
+      ]
+    },
+    {
+      "id": "shared-crossroads",
+      "role": "shared",
+      "title": "Three Roads from the Market",
+      "text": "At the market, people argue about machines, wages and reform. A steam workshop needs an apprentice. A mill owner's family carriage waits nearby. A young reformer hands out printed notices.",
+      "historyNote": "Industrial change created new roles in society. Some people gained wealth and skills, while others pushed for fairer laws.",
+      "glossaryTerms": ["apprentice", "class", "reform"],
+      "evidence": ["Industrial society included factory workers, rural families, skilled engineers, wealthy owners and reformers."],
+      "choices": [
+        {
+          "label": "Become an apprentice engineer.",
+          "next": "engineer-01-workshop",
+          "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 1, "reform": 0 }
+        },
+        {
+          "label": "Enter the home of a mill owner's child.",
+          "next": "owner-01-counting-house",
+          "effects": { "money": 3, "health": 1, "skills": 0, "reputation": 1, "reform": -1 }
+        },
+        {
+          "label": "Join the young reformer with the printed notices.",
+          "next": "reformer-01-print-shop",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 0, "reform": 2 }
+        }
+      ]
+    },
+    {
+      "id": "factory-01-bell",
+      "role": "Factory Child",
+      "title": "The Mill Bell",
+      "text": "The bell rings before sunrise. You hurry into the cotton mill with other children. The air is warm and dusty, and the machines are already moving.",
+      "historyNote": "Many children worked in textile factories. Their wages helped poor families, but the hours were long and the work could be dangerous.",
+      "glossaryTerms": ["child labour", "textile", "factory system"],
+      "evidence": ["Children were part of the factory workforce because many families needed extra income."],
+      "choices": [
+        {
+          "label": "Work quickly to earn your full wage.",
+          "next": "factory-02-machines",
+          "effects": { "money": 2, "health": -1, "skills": 0, "reputation": 1, "reform": 0 }
+        },
+        {
+          "label": "Ask an older worker how to stay safe.",
+          "next": "factory-02-machines",
+          "effects": { "money": 1, "health": 1, "skills": 1, "reputation": 1, "reform": 0 }
+        },
+        {
+          "label": "Notice the youngest children and remember their stories.",
+          "next": "factory-03-accident",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 0, "reform": 2 }
+        }
+      ]
+    },
+    {
+      "id": "factory-02-machines",
+      "role": "Factory Child",
+      "title": "Flying Shuttles and Spinning Frames",
+      "text": "A supervisor points to the spinning frames. The machines make cloth faster than hand workers ever could. They also leave little room for mistakes.",
+      "historyNote": "Textile inventions such as the spinning jenny, water frame and power loom helped speed up cloth production.",
+      "glossaryTerms": ["spinning jenny", "power loom", "mass production"],
+      "evidence": ["Textile inventions increased production but changed the pace and danger of work."],
+      "choices": [
+        {
+          "label": "Learn how the machine works.",
+          "next": "factory-04-cotton",
+          "effects": { "money": 1, "health": 0, "skills": 2, "reputation": 1, "reform": 0 }
+        },
+        {
+          "label": "Clean under the moving frame.",
+          "next": "factory-03-accident",
+          "effects": { "money": 2, "health": -2, "skills": 0, "reputation": 0, "reform": 0 }
+        },
+        {
+          "label": "Slow down so nobody is hurt.",
+          "next": "factory-03-accident",
+          "effects": { "money": -1, "health": 1, "skills": 0, "reputation": -1, "reform": 1 }
+        }
+      ]
+    },
+    {
+      "id": "factory-03-accident",
+      "role": "Factory Child",
+      "title": "When the Machine Catches",
+      "text": "A sleeve catches near the rollers. The noise hides the shout. Someone must act before the injury becomes worse.",
+      "historyNote": "Factory accidents were common, especially for children who cleaned, crawled under or worked close to moving machines.",
+      "glossaryTerms": ["factory system", "child labour", "Factory Acts"],
+      "evidence": ["Dangerous factory machinery was one reason reformers demanded laws to protect children."],
+      "choices": [
+        {
+          "label": "Pull the stop lever.",
+          "next": "factory-05-factory-act",
+          "effects": { "money": -1, "health": 2, "skills": 0, "reputation": 1, "reform": 2 }
+        },
+        {
+          "label": "Call for the overseer and keep your place.",
+          "next": "factory-05-factory-act",
+          "effects": { "money": 1, "health": -1, "skills": 0, "reputation": 0, "reform": 0 }
+        },
+        {
+          "label": "Write down what happened for an inspector.",
+          "next": "shared-inspector",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+        }
+      ]
+    },
+    {
+      "id": "factory-04-cotton",
+      "role": "Factory Child",
+      "title": "Cotton from Across the Sea",
+      "text": "Bales of raw cotton arrive at the mill. A clerk says the cotton came from far away, through Britain's empire and trade networks.",
+      "historyNote": "British textile factories relied on imported cotton. Cotton was linked to empire, global trade and enslaved labour in some parts of the world.",
+      "glossaryTerms": ["empire", "cotton", "trade"],
+      "evidence": ["The textile industry depended on global supplies of cotton, not just local British labour."],
+      "choices": [
+        {
+          "label": "Ask where the cotton came from.",
+          "next": "shared-empire-cotton",
+          "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 0, "reform": 1 }
+        },
+        {
+          "label": "Focus only on finishing your shift.",
+          "next": "factory-05-factory-act",
+          "effects": { "money": 2, "health": -1, "skills": 0, "reputation": 0, "reform": 0 }
+        },
+        {
+          "label": "Tell a reformer that mill work has a global story.",
+          "next": "reformer-03-evidence",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+        }
+      ]
+    },
+    {
+      "id": "factory-05-factory-act",
+      "role": "Factory Child",
+      "title": "The Inspector's Visit",
+      "text": "An inspector arrives to ask about hours, ages and injuries. The overseer watches closely. You must decide how much truth to tell.",
+      "historyNote": "Factory Acts slowly limited child labour and working hours. Early laws were difficult to enforce without inspectors.",
+      "glossaryTerms": ["Factory Acts", "inspector", "reform"],
+      "evidence": ["Factory Acts showed that government began to regulate industrial workplaces."],
+      "choices": [
+        {
+          "label": "Tell the inspector the truth.",
+          "next": "ending-factory",
+          "effects": { "money": -1, "health": 0, "skills": 1, "reputation": 2, "reform": 3 }
+        },
+        {
+          "label": "Stay quiet to protect your wage.",
+          "next": "ending-factory",
+          "effects": { "money": 2, "health": -1, "skills": 0, "reputation": 0, "reform": 0 }
+        },
+        {
+          "label": "Give evidence but ask not to be named.",
+          "next": "ending-factory",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+        }
+      ]
+    },
+    {
+      "id": "rural-01-fences",
+      "role": "Rural Farmer’s Child",
+      "title": "Fences Across the Common",
+      "text": "The common land has been fenced. Your family can no longer graze animals there. Your parents say the old village life is changing.",
+      "historyNote": "Enclosure turned shared land into private farms. It helped some landowners improve farming, but many poorer families lost access to land.",
+      "glossaryTerms": ["enclosure", "common land", "agricultural change"],
+      "evidence": ["Enclosure improved some farms but harmed families who depended on common land."],
+      "choices": [
+        {
+          "label": "Look for work on a larger enclosed farm.",
+          "next": "rural-02-new-farming",
+          "effects": { "money": 1, "health": 0, "skills": 1, "reputation": 1, "reform": 0 }
+        },
+        {
+          "label": "Travel toward a factory town.",
+          "next": "shared-urban-street",
+          "effects": { "money": 1, "health": -1, "skills": 0, "reputation": 0, "reform": 0 }
+        },
+        {
+          "label": "Join neighbours complaining about the fences.",
+          "next": "rural-03-protest",
+          "effects": { "money": -1, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+        }
+      ]
+    },
+    {
+      "id": "rural-02-new-farming",
+      "role": "Rural Farmer’s Child",
+      "title": "Seeds in Straight Lines",
+      "text": "A farmer shows you a seed drill and new crop rotation. The work is more organised, but fewer labourers are needed than before.",
+      "historyNote": "Agricultural change increased food production. Better tools, selective breeding and crop rotation helped feed a growing population.",
+      "glossaryTerms": ["seed drill", "crop rotation", "agricultural revolution"],
+      "evidence": ["Agricultural change helped feed growing towns but reduced some rural jobs."],
+      "choices": [
+        {
+          "label": "Learn the new farming methods.",
+          "next": "rural-04-market",
+          "effects": { "money": 1, "health": 1, "skills": 2, "reputation": 1, "reform": 0 }
+        },
+        {
+          "label": "Ask why fewer workers are needed.",
+          "next": "rural-03-protest",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 0, "reform": 1 }
+        },
+        {
+          "label": "Save money to move to the city.",
+          "next": "shared-urban-street",
+          "effects": { "money": 2, "health": 0, "skills": 0, "reputation": 0, "reform": 0 }
+        }
+      ]
+    },
+    {
+      "id": "rural-03-protest",
+      "role": "Rural Farmer’s Child",
+      "title": "Anger in the Village",
+      "text": "Some labourers talk about breaking machines and burning notices. Others want petitions instead. Everyone is worried about food, rent and work.",
+      "historyNote": "Some rural and industrial workers protested against changes that threatened their wages and skills. Protest could be peaceful or violent.",
+      "glossaryTerms": ["protest", "petition", "Luddite"],
+      "evidence": ["Protest showed that many workers felt industrial and agricultural change was unfair."],
+      "choices": [
+        {
+          "label": "Sign a petition for fair treatment.",
+          "next": "shared-reform-meeting",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 2, "reform": 2 }
+        },
+        {
+          "label": "Join an angry crowd at night.",
+          "next": "rural-05-city-choice",
+          "effects": { "money": -1, "health": -1, "skills": 0, "reputation": -2, "reform": 1 }
+        },
+        {
+          "label": "Avoid trouble and look for new work.",
+          "next": "rural-05-city-choice",
+          "effects": { "money": 1, "health": 0, "skills": 0, "reputation": 0, "reform": 0 }
+        }
+      ]
+    },
+    {
+      "id": "rural-04-market",
+      "role": "Rural Farmer’s Child",
+      "title": "Cheap Cloth at Market",
+      "text": "At market, machine-made cloth is cheaper than handmade cloth. Some families are pleased. Skilled spinners say their work is disappearing.",
+      "historyNote": "Factories lowered the cost of many goods, but they also damaged traditional home industries.",
+      "glossaryTerms": ["domestic system", "textile", "mass production"],
+      "evidence": ["Industrial goods could be cheaper for buyers while threatening older skilled work."],
+      "choices": [
+        {
+          "label": "Buy cheap cloth for your family.",
+          "next": "rural-05-city-choice",
+          "effects": { "money": 1, "health": 0, "skills": 0, "reputation": 0, "reform": 0 }
+        },
+        {
+          "label": "Support a local hand spinner.",
+          "next": "shared-reform-meeting",
+          "effects": { "money": -1, "health": 0, "skills": 0, "reputation": 1, "reform": 1 }
+        },
+        {
+          "label": "Ask how factory cloth is made.",
+          "next": "engineer-02-textile-tech",
+          "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 0, "reform": 0 }
+        }
+      ]
+    },
+    {
+      "id": "rural-05-city-choice",
+      "role": "Rural Farmer’s Child",
+      "title": "Road to the Factory Town",
+      "text": "A coach heads toward Manchester. The city may offer wages, but people warn you about crowding, smoke and disease.",
+      "historyNote": "Urbanisation increased as people moved from rural areas to industrial towns for work.",
+      "glossaryTerms": ["urbanisation", "migration", "public health"],
+      "evidence": ["Rural change helped push people toward growing industrial cities."],
+      "choices": [
+        {
+          "label": "Move to the city for factory work.",
+          "next": "shared-urban-street",
+          "effects": { "money": 2, "health": -1, "skills": 0, "reputation": 0, "reform": 0 }
+        },
+        {
+          "label": "Stay rural and use your new farming skills.",
+          "next": "ending-rural",
+          "effects": { "money": 1, "health": 1, "skills": 2, "reputation": 1, "reform": 0 }
+        },
+        {
+          "label": "Travel to speak for rural families.",
+          "next": "ending-rural",
+          "effects": { "money": -1, "health": 0, "skills": 1, "reputation": 2, "reform": 2 }
+        }
+      ]
+    },
+    {
+      "id": "engineer-01-workshop",
+      "role": "Apprentice Engineer",
+      "title": "The Workshop",
+      "text": "Your master gives you a file and a drawing of a steam engine part. The workshop smells of oil, coal smoke and hot iron.",
+      "historyNote": "Engineers and skilled metal workers were important to industrial growth. Apprentices learned through practice and observation.",
+      "glossaryTerms": ["apprentice", "steam engine", "iron"],
+      "evidence": ["Industrialisation created new skilled jobs in engineering and machine making."],
+      "choices": [
+        {
+          "label": "Study the engine drawing carefully.",
+          "next": "engineer-03-steam-pump",
+          "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 1, "reform": 0 }
+        },
+        {
+          "label": "Take extra coal work for pay.",
+          "next": "engineer-04-coal-iron",
+          "effects": { "money": 2, "health": -1, "skills": 1, "reputation": 0, "reform": 0 }
+        },
+        {
+          "label": "Visit the textile mill to see machines in use.",
+          "next": "engineer-02-textile-tech",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 0 }
+        }
+      ]
+    },
+    {
+      "id": "engineer-02-textile-tech",
+      "role": "Apprentice Engineer",
+      "title": "The Power Loom Room",
+      "text": "Rows of power looms clatter. One machine can do work that once took several hand weavers. The speed is impressive, but the workers look exhausted.",
+      "historyNote": "Textile inventions changed production and helped factory owners produce more cloth in less time.",
+      "glossaryTerms": ["power loom", "factory system", "textile"],
+      "evidence": ["Textile machines increased output but changed working conditions and reduced some skilled jobs."],
+      "choices": [
+        {
+          "label": "Improve a loom part to make it smoother.",
+          "next": "engineer-03-steam-pump",
+          "effects": { "money": 1, "health": 0, "skills": 2, "reputation": 1, "reform": 0 }
+        },
+        {
+          "label": "Ask workers what the machine has changed.",
+          "next": "shared-reform-meeting",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+        },
+        {
+          "label": "Sell your idea to a mill owner.",
+          "next": "owner-03-investment",
+          "effects": { "money": 2, "health": 0, "skills": 1, "reputation": 1, "reform": -1 }
+        }
+      ]
+    },
+    {
+      "id": "engineer-03-steam-pump",
+      "role": "Apprentice Engineer",
+      "title": "The Mine Pump",
+      "text": "A steam engine pumps water from a coal mine. Without it, miners could not reach deeper seams. With it, the mine grows busier.",
+      "historyNote": "Steam power helped mines, factories, ships and railways. It increased production and demand for coal.",
+      "glossaryTerms": ["steam power", "coal", "mine"],
+      "evidence": ["Steam power allowed industry to expand beyond the limits of water and animal power."],
+      "choices": [
+        {
+          "label": "Focus on making the pump more efficient.",
+          "next": "engineer-04-coal-iron",
+          "effects": { "money": 1, "health": 0, "skills": 2, "reputation": 1, "reform": 0 }
+        },
+        {
+          "label": "Ask about mine safety.",
+          "next": "shared-inspector",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 0, "reform": 2 }
+        },
+        {
+          "label": "Plan a railway engine using steam power.",
+          "next": "engineer-05-railway",
+          "effects": { "money": 1, "health": 0, "skills": 2, "reputation": 2, "reform": 0 }
+        }
+      ]
+    },
+    {
+      "id": "engineer-04-coal-iron",
+      "role": "Apprentice Engineer",
+      "title": "Coal, Iron and Heat",
+      "text": "At the ironworks, coal fires burn white-hot. Iron rails, machine parts and tools are shaped for the new industrial world.",
+      "historyNote": "Coal and iron were key resources of the Industrial Revolution. They powered machines and supplied material for factories, bridges and railways.",
+      "glossaryTerms": ["coal", "iron", "industrialisation"],
+      "evidence": ["Coal and iron supported steam engines, factories and transport growth."],
+      "choices": [
+        {
+          "label": "Learn iron casting skills.",
+          "next": "engineer-05-railway",
+          "effects": { "money": 1, "health": -1, "skills": 2, "reputation": 1, "reform": 0 }
+        },
+        {
+          "label": "Record the smoke and waste from the works.",
+          "next": "shared-pollution",
+          "effects": { "money": 0, "health": -1, "skills": 1, "reputation": 0, "reform": 2 }
+        },
+        {
+          "label": "Take a safer workshop job.",
+          "next": "engineer-05-railway",
+          "effects": { "money": 0, "health": 1, "skills": 1, "reputation": 0, "reform": 0 }
+        }
+      ]
+    },
+    {
+      "id": "engineer-05-railway",
+      "role": "Apprentice Engineer",
+      "title": "Rails Across the Land",
+      "text": "A locomotive waits on new iron rails. It can move goods and people faster than canals or carts, but building railways is hard and dangerous work.",
+      "historyNote": "Transport changed rapidly. Canals, roads, steamships and railways helped link mines, factories, ports and markets.",
+      "glossaryTerms": ["railway", "transport", "steam engine"],
+      "evidence": ["Improved transport helped industry grow by moving raw materials and finished goods faster."],
+      "choices": [
+        {
+          "label": "Become a railway mechanic.",
+          "next": "ending-engineer",
+          "effects": { "money": 2, "health": 0, "skills": 2, "reputation": 2, "reform": 0 }
+        },
+        {
+          "label": "Campaign for safer railway work.",
+          "next": "ending-engineer",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 2, "reform": 2 }
+        },
+        {
+          "label": "Design machines for factory owners.",
+          "next": "ending-engineer",
+          "effects": { "money": 3, "health": 0, "skills": 2, "reputation": 1, "reform": -1 }
+        }
+      ]
+    },
+    {
+      "id": "owner-01-counting-house",
+      "role": "Mill Owner’s Child",
+      "title": "The Counting House",
+      "text": "Your family counts profits from cotton cloth. Outside the office, workers hurry between machines. Your life is comfortable, but the mill depends on their labour.",
+      "historyNote": "Factory owners and investors could become wealthy during industrialisation. Their decisions affected wages, hours and safety.",
+      "glossaryTerms": ["class", "profit", "factory system"],
+      "evidence": ["Industrialisation widened differences between wealthy owners and many workers."],
+      "choices": [
+        {
+          "label": "Study the accounts and learn the business.",
+          "next": "owner-03-investment",
+          "effects": { "money": 2, "health": 0, "skills": 1, "reputation": 1, "reform": -1 }
+        },
+        {
+          "label": "Walk the factory floor and speak with workers.",
+          "next": "owner-02-worker-housing",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 1 }
+        },
+        {
+          "label": "Ask about the children working there.",
+          "next": "shared-inspector",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 0, "reform": 2 }
+        }
+      ]
+    },
+    {
+      "id": "owner-02-worker-housing",
+      "role": "Mill Owner’s Child",
+      "title": "Rows of Brick Houses",
+      "text": "The workers' homes are packed close together. The streets are muddy, and the water pump serves too many families.",
+      "historyNote": "Rapid urban growth often produced crowded housing and poor sanitation. These conditions increased the spread of disease.",
+      "glossaryTerms": ["urbanisation", "sanitation", "public health"],
+      "evidence": ["Industrial cities often grew faster than housing, drains and clean water supplies."],
+      "choices": [
+        {
+          "label": "Suggest spending money on better housing.",
+          "next": "owner-04-public-health",
+          "effects": { "money": -2, "health": 1, "skills": 0, "reputation": 2, "reform": 2 }
+        },
+        {
+          "label": "Ignore the housing and protect profits.",
+          "next": "owner-03-investment",
+          "effects": { "money": 2, "health": 0, "skills": 0, "reputation": -1, "reform": -1 }
+        },
+        {
+          "label": "Collect notes for a town health report.",
+          "next": "shared-public-health",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+        }
+      ]
+    },
+    {
+      "id": "owner-03-investment",
+      "role": "Mill Owner’s Child",
+      "title": "A New Machine",
+      "text": "An engineer offers a new machine that could increase output. It may also mean fewer skilled workers are needed.",
+      "historyNote": "Investment in machinery increased production and profit, but it could reduce demand for some workers.",
+      "glossaryTerms": ["investment", "mechanisation", "class"],
+      "evidence": ["Mechanisation could benefit owners while threatening workers' jobs and bargaining power."],
+      "choices": [
+        {
+          "label": "Buy the machine immediately.",
+          "next": "owner-05-reform-debate",
+          "effects": { "money": 3, "health": 0, "skills": 1, "reputation": 1, "reform": -1 }
+        },
+        {
+          "label": "Buy it but retrain some workers.",
+          "next": "owner-05-reform-debate",
+          "effects": { "money": 1, "health": 0, "skills": 1, "reputation": 2, "reform": 1 }
+        },
+        {
+          "label": "Ask workers and engineers to discuss the change.",
+          "next": "shared-reform-meeting",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 2, "reform": 2 }
+        }
+      ]
+    },
+    {
+      "id": "owner-04-public-health",
+      "role": "Mill Owner’s Child",
+      "title": "The Cost of Clean Water",
+      "text": "A doctor says dirty water spreads disease. Your family can help pay for drains, but some owners say public health is not their responsibility.",
+      "historyNote": "Public health reform grew as people connected disease with dirty water, poor drainage and overcrowding.",
+      "glossaryTerms": ["public health", "cholera", "sanitation"],
+      "evidence": ["Public health reform showed that industrial cities needed shared solutions, not only private charity."],
+      "choices": [
+        {
+          "label": "Support drains and cleaner water.",
+          "next": "shared-public-health",
+          "effects": { "money": -2, "health": 2, "skills": 0, "reputation": 2, "reform": 2 }
+        },
+        {
+          "label": "Donate a small amount but avoid bigger change.",
+          "next": "owner-05-reform-debate",
+          "effects": { "money": -1, "health": 0, "skills": 0, "reputation": 1, "reform": 0 }
+        },
+        {
+          "label": "Argue that workers should solve it themselves.",
+          "next": "owner-05-reform-debate",
+          "effects": { "money": 1, "health": -1, "skills": 0, "reputation": -2, "reform": -1 }
+        }
+      ]
+    },
+    {
+      "id": "owner-05-reform-debate",
+      "role": "Mill Owner’s Child",
+      "title": "Dinner Table Debate",
+      "text": "At dinner, adults argue about Factory Acts. Some fear the laws will reduce profit. Others say children need limits on hours and safer work.",
+      "historyNote": "Factory Acts were laws that gradually limited child labour and improved conditions, though change was slow.",
+      "glossaryTerms": ["Factory Acts", "laissez-faire", "reform"],
+      "evidence": ["Factory reform raised arguments about profit, freedom, safety and government responsibility."],
+      "choices": [
+        {
+          "label": "Defend strict limits on child labour.",
+          "next": "ending-owner",
+          "effects": { "money": -1, "health": 0, "skills": 1, "reputation": 2, "reform": 3 }
+        },
+        {
+          "label": "Defend the owner's right to run the mill.",
+          "next": "ending-owner",
+          "effects": { "money": 2, "health": 0, "skills": 0, "reputation": 1, "reform": -2 }
+        },
+        {
+          "label": "Argue for profit with basic protections.",
+          "next": "ending-owner",
+          "effects": { "money": 1, "health": 0, "skills": 1, "reputation": 2, "reform": 1 }
+        }
+      ]
+    },
+    {
+      "id": "reformer-01-print-shop",
+      "role": "Young Reformer",
+      "title": "Above the Print Shop",
+      "text": "You meet reformers above a print shop. They want evidence about factories, housing and disease before they write a pamphlet.",
+      "historyNote": "Reformers used reports, newspapers, petitions and public meetings to pressure Parliament.",
+      "glossaryTerms": ["reform", "petition", "Parliament"],
+      "evidence": ["Reform movements needed evidence and public pressure to change laws."],
+      "choices": [
+        {
+          "label": "Visit a factory and interview children.",
+          "next": "reformer-02-child-testimony",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+        },
+        {
+          "label": "Visit crowded workers' housing.",
+          "next": "shared-urban-street",
+          "effects": { "money": 0, "health": -1, "skills": 1, "reputation": 1, "reform": 1 }
+        },
+        {
+          "label": "Research cotton, empire and trade.",
+          "next": "shared-empire-cotton",
+          "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 0, "reform": 1 }
+        }
+      ]
+    },
+    {
+      "id": "reformer-02-child-testimony",
+      "role": "Young Reformer",
+      "title": "A Child's Testimony",
+      "text": "A tired child describes starting before sunrise, eating quickly and fearing the machines. The words are simple, but powerful.",
+      "historyNote": "Parliamentary inquiries sometimes collected testimony from child workers. These accounts helped reveal factory conditions.",
+      "glossaryTerms": ["testimony", "child labour", "Factory Acts"],
+      "evidence": ["First-hand testimony from child workers helped support arguments for factory reform."],
+      "choices": [
+        {
+          "label": "Record the testimony carefully.",
+          "next": "reformer-03-evidence",
+          "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 1, "reform": 2 }
+        },
+        {
+          "label": "Add emotional language to make it stronger.",
+          "next": "reformer-03-evidence",
+          "effects": { "money": 0, "health": 0, "skills": 0, "reputation": -1, "reform": 1 }
+        },
+        {
+          "label": "Ask the child what change would help most.",
+          "next": "shared-inspector",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 2, "reform": 2 }
+        }
+      ]
+    },
+    {
+      "id": "reformer-03-evidence",
+      "role": "Young Reformer",
+      "title": "Sorting the Evidence",
+      "text": "Your table is covered with notes about hours, injuries, smoke, housing and wages. You must choose what to publish first.",
+      "historyNote": "Reliable evidence made reform campaigns more convincing. Reformers had to show patterns, not only single sad stories.",
+      "glossaryTerms": ["evidence", "reform", "public opinion"],
+      "evidence": ["Evidence could turn private suffering into a public issue."],
+      "choices": [
+        {
+          "label": "Focus on child labour and factory hours.",
+          "next": "reformer-04-parliament",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+        },
+        {
+          "label": "Focus on dirty water and disease.",
+          "next": "shared-public-health",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+        },
+        {
+          "label": "Focus on pollution from coal smoke.",
+          "next": "shared-pollution",
+          "effects": { "money": 0, "health": -1, "skills": 1, "reputation": 0, "reform": 2 }
+        }
+      ]
+    },
+    {
+      "id": "reformer-04-parliament",
+      "role": "Young Reformer",
+      "title": "News from Parliament",
+      "text": "Parliament is debating factory laws. Some speakers say children must be protected. Others say business should be left alone.",
+      "historyNote": "Laissez-faire ideas argued for limited government interference. Reformers argued that laws were needed to protect vulnerable people.",
+      "glossaryTerms": ["Parliament", "laissez-faire", "Factory Acts"],
+      "evidence": ["Factory reform was debated because people disagreed about the proper role of government."],
+      "choices": [
+        {
+          "label": "Send your evidence to a reforming MP.",
+          "next": "reformer-05-public-meeting",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 2, "reform": 2 }
+        },
+        {
+          "label": "Print a pamphlet for ordinary readers.",
+          "next": "reformer-05-public-meeting",
+          "effects": { "money": -1, "health": 0, "skills": 1, "reputation": 2, "reform": 2 }
+        },
+        {
+          "label": "Meet factory owners and seek compromise.",
+          "next": "owner-05-reform-debate",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 1 }
+        }
+      ]
+    },
+    {
+      "id": "reformer-05-public-meeting",
+      "role": "Young Reformer",
+      "title": "The Public Meeting",
+      "text": "The hall is crowded. Workers, owners, doctors and families listen. You have one chance to explain what the Industrial Revolution has done.",
+      "historyNote": "Public meetings helped spread reform ideas and build pressure for political change.",
+      "glossaryTerms": ["public meeting", "reform", "working class"],
+      "evidence": ["Reform depended on organised public pressure as well as evidence."],
+      "choices": [
+        {
+          "label": "Argue that reform must protect children first.",
+          "next": "ending-reformer",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 2, "reform": 3 }
+        },
+        {
+          "label": "Argue for cleaner cities and public health.",
+          "next": "ending-reformer",
+          "effects": { "money": 0, "health": 1, "skills": 1, "reputation": 2, "reform": 3 }
+        },
+        {
+          "label": "Argue that progress brought benefits and harms.",
+          "next": "ending-reformer",
+          "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 2, "reform": 2 }
+        }
+      ]
+    },
+    {
+      "id": "shared-urban-street",
+      "role": "shared",
+      "title": "A Street in Manchester",
+      "text": "The street is crowded with workers, carts and smoke. Families share small rooms. Work is close by, but clean air and clean water are harder to find.",
+      "historyNote": "Urbanisation created new opportunities but also overcrowding, poor housing and disease.",
+      "glossaryTerms": ["urbanisation", "working class", "public health"],
+      "evidence": ["Industrial towns grew quickly, often before proper housing and sanitation were built."],
+      "choices": [
+        {
+          "label": "Find work near the mills.",
+          "next": "factory-01-bell",
+          "effects": { "money": 2, "health": -1, "skills": 0, "reputation": 0, "reform": 0 }
+        },
+        {
+          "label": "Investigate the water pump.",
+          "next": "shared-public-health",
+          "effects": { "money": 0, "health": -1, "skills": 1, "reputation": 1, "reform": 2 }
+        },
+        {
+          "label": "Attend a meeting about city conditions.",
+          "next": "shared-reform-meeting",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 1 }
+        }
+      ]
+    },
+    {
+      "id": "shared-pollution",
+      "role": "shared",
+      "title": "Black Smoke",
+      "text": "Coal smoke hangs over the rooftops. The smoke means engines are working and wages are being paid, but it also burns throats and stains buildings.",
+      "historyNote": "Coal powered industry but caused serious air pollution in industrial towns.",
+      "glossaryTerms": ["pollution", "coal", "public health"],
+      "evidence": ["Coal helped industry grow while damaging the environment and people's health."],
+      "choices": [
+        {
+          "label": "Take paid work moving coal.",
+          "next": "engineer-04-coal-iron",
+          "effects": { "money": 2, "health": -1, "skills": 0, "reputation": 0, "reform": 0 }
+        },
+        {
+          "label": "Collect evidence about smoke and illness.",
+          "next": "reformer-03-evidence",
+          "effects": { "money": 0, "health": -1, "skills": 1, "reputation": 1, "reform": 2 }
+        },
+        {
+          "label": "Call for cleaner streets and drains.",
+          "next": "shared-public-health",
+          "effects": { "money": 0, "health": 0, "skills": 0, "reputation": 1, "reform": 2 }
+        }
+      ]
+    },
+    {
+      "id": "shared-empire-cotton",
+      "role": "shared",
+      "title": "Cotton, Empire and Trade",
+      "text": "A map shows cotton moving from distant lands to British ports and mills. The cloth looks ordinary, but its history crosses oceans.",
+      "historyNote": "Britain's textile industry was connected to empire and global trade. Cotton supplies were linked to colonial power and, in some places, enslaved labour.",
+      "glossaryTerms": ["empire", "cotton", "global trade"],
+      "evidence": ["Industrial Britain depended on resources and markets beyond Britain itself."],
+      "choices": [
+        {
+          "label": "Trace the cotton route on the map.",
+          "next": "factory-04-cotton",
+          "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 0, "reform": 1 }
+        },
+        {
+          "label": "Ask who profits from this trade.",
+          "next": "owner-01-counting-house",
+          "effects": { "money": 1, "health": 0, "skills": 1, "reputation": 0, "reform": 0 }
+        },
+        {
+          "label": "Add the global story to a reform pamphlet.",
+          "next": "reformer-03-evidence",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+        }
+      ]
+    },
+    {
+      "id": "shared-reform-meeting",
+      "role": "shared",
+      "title": "The Reform Meeting",
+      "text": "Workers, religious leaders and middle-class reformers meet in a crowded hall. They disagree about methods, but they agree that change is needed.",
+      "historyNote": "Reform movements grew in response to poor working and living conditions. People used petitions, meetings and newspapers to demand change.",
+      "glossaryTerms": ["reform", "petition", "trade union"],
+      "evidence": ["Reform was organised through meetings, petitions, printed materials and public pressure."],
+      "choices": [
+        {
+          "label": "Collect signatures for a petition.",
+          "next": "reformer-04-parliament",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 2, "reform": 2 }
+        },
+        {
+          "label": "Listen to workers describe their conditions.",
+          "next": "reformer-02-child-testimony",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+        },
+        {
+          "label": "Seek compromise with local owners.",
+          "next": "owner-05-reform-debate",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 1 }
+        }
+      ]
+    },
+    {
+      "id": "shared-inspector",
+      "role": "shared",
+      "title": "Questions from an Inspector",
+      "text": "An inspector asks about hours, injuries and ages. Some people welcome the questions. Others fear punishment or lost profits.",
+      "historyNote": "Inspectors helped enforce factory laws, but early inspection systems were limited and could face resistance.",
+      "glossaryTerms": ["inspector", "Factory Acts", "child labour"],
+      "evidence": ["Laws needed inspection and enforcement to make real changes in factories."],
+      "choices": [
+        {
+          "label": "Give honest evidence.",
+          "next": "factory-05-factory-act",
+          "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 2, "reform": 2 }
+        },
+        {
+          "label": "Protect the factory from criticism.",
+          "next": "owner-05-reform-debate",
+          "effects": { "money": 2, "health": 0, "skills": 0, "reputation": -1, "reform": -1 }
+        },
+        {
+          "label": "Turn the evidence into a reform report.",
+          "next": "reformer-03-evidence",
+          "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 1, "reform": 2 }
+        }
+      ]
+    },
+    {
+      "id": "shared-public-health",
+      "role": "shared",
+      "title": "The Dirty Pump",
+      "text": "Neighbours complain that the water tastes foul. A doctor says disease spreads when sewage and drinking water mix.",
+      "historyNote": "Public health reform responded to disease, overcrowding, dirty water and poor drainage in industrial cities.",
+      "glossaryTerms": ["public health", "cholera", "sanitation"],
+      "evidence": ["Public health problems showed that industrial growth needed city planning and government action."],
+      "choices": [
+        {
+          "label": "Campaign for drains and clean water.",
+          "next": "reformer-05-public-meeting",
+          "effects": { "money": 0, "health": 1, "skills": 1, "reputation": 2, "reform": 2 }
+        },
+        {
+          "label": "Ask owners to help pay for improvements.",
+          "next": "owner-04-public-health",
+          "effects": { "money": -1, "health": 1, "skills": 0, "reputation": 1, "reform": 1 }
+        },
+        {
+          "label": "Move away from the worst street.",
+          "next": "ending-rural",
+          "effects": { "money": -2, "health": 2, "skills": 0, "reputation": 0, "reform": 0 }
+        }
+      ]
+    },
+    {
+      "id": "ending-factory",
+      "role": "Factory Child",
+      "title": "Ending: A Voice from the Mill",
+      "text": "Your choices show the pressure on factory children: wages mattered, but so did safety, health and time to grow.",
+      "historyNote": "Factory children experienced both the need for paid work and the harm caused by long hours and dangerous machines.",
+      "glossaryTerms": ["child labour", "Factory Acts", "reform"],
+      "evidence": ["Factory child experiences help explain why many historians see industrialisation as both economically powerful and socially harmful."],
+      "choices": [
+        {
+          "label": "Continue to final reflection.",
+          "next": "final-reflection",
+          "effects": { "money": 0, "health": 0, "skills": 0, "reputation": 0, "reform": 0 }
+        }
+      ]
+    },
+    {
+      "id": "ending-rural",
+      "role": "Rural Farmer’s Child",
+      "title": "Ending: Between Field and Factory",
+      "text": "Your pathway shows how agricultural change could improve production while pushing some rural families toward uncertain city lives.",
+      "historyNote": "Agricultural change and enclosure helped prepare Britain for industrial growth, but the effects were uneven.",
+      "glossaryTerms": ["enclosure", "agricultural change", "urbanisation"],
+      "evidence": ["Rural change helped feed industrial Britain, but it also disrupted older village life."],
+      "choices": [
+        {
+          "label": "Continue to final reflection.",
+          "next": "final-reflection",
+          "effects": { "money": 0, "health": 0, "skills": 0, "reputation": 0, "reform": 0 }
+        }
+      ]
+    },
+    {
+      "id": "ending-engineer",
+      "role": "Apprentice Engineer",
+      "title": "Ending: Power and Progress",
+      "text": "Your pathway shows how steam, coal, iron and railways created new skills and opportunities, but also new dangers and pollution.",
+      "historyNote": "Technology was central to industrialisation, but technological progress did not automatically solve social problems.",
+      "glossaryTerms": ["steam power", "coal", "transport"],
+      "evidence": ["Engineering progress helped transform production and transport while increasing dependence on coal and dangerous work."],
+      "choices": [
+        {
+          "label": "Continue to final reflection.",
+          "next": "final-reflection",
+          "effects": { "money": 0, "health": 0, "skills": 0, "reputation": 0, "reform": 0 }
+        }
+      ]
+    },
+    {
+      "id": "ending-owner",
+      "role": "Mill Owner’s Child",
+      "title": "Ending: Profit and Responsibility",
+      "text": "Your pathway shows the choices facing wealthy industrial families. Profit could build businesses, but workers paid many of the costs.",
+      "historyNote": "Class shaped experiences of the Industrial Revolution. Owners often had more power to decide how change would affect others.",
+      "glossaryTerms": ["class", "profit", "Factory Acts"],
+      "evidence": ["Industrial wealth raised questions about responsibility, fairness and government regulation."],
+      "choices": [
+        {
+          "label": "Continue to final reflection.",
+          "next": "final-reflection",
+          "effects": { "money": 0, "health": 0, "skills": 0, "reputation": 0, "reform": 0 }
+        }
+      ]
+    },
+    {
+      "id": "ending-reformer",
+      "role": "Young Reformer",
+      "title": "Ending: Demanding Change",
+      "text": "Your pathway shows how reformers used evidence, meetings and pressure to challenge unsafe work and unhealthy cities.",
+      "historyNote": "Reform did not happen all at once. It grew through campaigns, investigations and laws such as Factory Acts and public health measures.",
+      "glossaryTerms": ["reform", "Factory Acts", "public health"],
+      "evidence": ["Reform movements show that industrial problems were challenged by organised people, not simply accepted."],
+      "choices": [
+        {
+          "label": "Continue to final reflection.",
+          "next": "final-reflection",
+          "effects": { "money": 0, "health": 0, "skills": 0, "reputation": 0, "reform": 0 }
+        }
+      ]
+    },
+    {
+      "id": "final-reflection",
+      "role": "shared",
+      "title": "Final Reflection",
+      "text": "Use your collected evidence to answer: Was the Industrial Revolution mainly positive, mainly negative, or mixed?",
+      "historyNote": "A strong historical judgement uses evidence from different viewpoints and explains both change and continuity.",
+      "glossaryTerms": ["evidence", "interpretation", "Industrial Revolution"],
+      "evidence": ["A balanced conclusion should use evidence from work, technology, cities, class, empire and reform."],
+      "choices": []
+    }
+  ]
+}

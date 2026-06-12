@@ -1,0 +1,246 @@
+[
+  {
+    "id": "shared-01-city-life",
+    "role": "shared",
+    "title": "City Life",
+    "text": "The city is crowded with workers, carts and smoke. Families live close to factories because work is nearby, but clean water and quiet streets are hard to find.",
+    "historyNote": "Urbanisation grew as people moved to industrial cities for work. Cities offered wages but often had overcrowding and poor sanitation.",
+    "glossaryTerms": ["urbanisation", "sanitation", "working class"],
+    "evidence": ["Industrial cities offered work but also created serious housing and health problems."],
+    "choices": [
+      {
+        "label": "Look for work near the factories.",
+        "next": "shared-02-steam-power",
+        "effects": { "money": 2, "health": -1, "skills": 0, "reputation": 0, "reform": 0 }
+      },
+      {
+        "label": "Investigate the crowded housing.",
+        "next": "shared-04-pollution",
+        "effects": { "money": 0, "health": -1, "skills": 1, "reputation": 1, "reform": 1 }
+      },
+      {
+        "label": "Attend a meeting about city conditions.",
+        "next": "shared-06-reform-meeting",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "shared-02-steam-power",
+    "role": "shared",
+    "title": "Steam Power",
+    "text": "A steam engine pumps and turns beside a factory wall. It can power machines even when there is no river nearby. Coal keeps it moving.",
+    "historyNote": "Steam power helped factories, mines, ships and railways grow. It made industry less dependent on water power.",
+    "glossaryTerms": ["steam power", "steam engine", "coal"],
+    "evidence": ["Steam power allowed factories and transport to expand beyond rivers."],
+    "choices": [
+      {
+        "label": "Study how the engine works.",
+        "next": "shared-03-transport",
+        "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Take paid work moving coal.",
+        "next": "shared-04-pollution",
+        "effects": { "money": 2, "health": -1, "skills": 0, "reputation": 0, "reform": 0 }
+      },
+      {
+        "label": "Ask if steam power makes work safer.",
+        "next": "shared-06-reform-meeting",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 0, "reform": 1 }
+      }
+    ]
+  },
+  {
+    "id": "shared-03-transport",
+    "role": "shared",
+    "title": "Canals and Railways",
+    "text": "At the wharf, barges carry coal and cotton along canals. Nearby, workers prepare iron rails for a new railway. Goods are moving faster than ever.",
+    "historyNote": "Canals and railways helped move raw materials and finished goods. Better transport connected mines, factories, ports and markets.",
+    "glossaryTerms": ["canal", "railway", "transport"],
+    "evidence": ["Improved transport helped industrial Britain move goods faster and more cheaply."],
+    "choices": [
+      {
+        "label": "Map how cotton travels to the mill.",
+        "next": "shared-08-empire-cotton",
+        "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Work at the canal wharf for wages.",
+        "next": "shared-04-pollution",
+        "effects": { "money": 2, "health": -1, "skills": 1, "reputation": 0, "reform": 0 }
+      },
+      {
+        "label": "Ask workers how railways may change their jobs.",
+        "next": "shared-05-protest",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 1 }
+      }
+    ]
+  },
+  {
+    "id": "shared-04-pollution",
+    "role": "shared",
+    "title": "Smoke and Dirty Water",
+    "text": "Coal smoke darkens the sky. Waste water runs near the street. Some people say pollution is the price of progress, but others cough through the working day.",
+    "historyNote": "Industrial growth caused air and water pollution. Public health problems became worse in crowded cities with poor drains.",
+    "glossaryTerms": ["pollution", "public health", "sanitation"],
+    "evidence": ["Industrial growth brought pollution that harmed health and city life."],
+    "choices": [
+      {
+        "label": "Collect evidence about smoke and sickness.",
+        "next": "shared-06-reform-meeting",
+        "effects": { "money": 0, "health": -1, "skills": 1, "reputation": 1, "reform": 2 }
+      },
+      {
+        "label": "Ignore the smoke and keep earning wages.",
+        "next": "shared-03-transport",
+        "effects": { "money": 2, "health": -1, "skills": 0, "reputation": 0, "reform": 0 }
+      },
+      {
+        "label": "Call for cleaner water and drains.",
+        "next": "shared-07-public-health",
+        "effects": { "money": 0, "health": 1, "skills": 0, "reputation": 1, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "shared-05-protest",
+    "role": "shared",
+    "title": "Protest in the Street",
+    "text": "Workers gather after hearing that machines may reduce jobs. Some want a peaceful petition. Others are angry enough to damage property.",
+    "historyNote": "Industrial change led to protests about wages, working conditions and machines. Protest could be peaceful or violent.",
+    "glossaryTerms": ["protest", "petition", "Luddite"],
+    "evidence": ["Protest showed that not everyone benefited equally from industrial change."],
+    "choices": [
+      {
+        "label": "Support a peaceful petition.",
+        "next": "shared-06-reform-meeting",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 2, "reform": 2 }
+      },
+      {
+        "label": "Join the angry crowd.",
+        "next": "shared-09-parliament",
+        "effects": { "money": -1, "health": -1, "skills": 0, "reputation": -2, "reform": 1 }
+      },
+      {
+        "label": "Speak to workers about safer ways to organise.",
+        "next": "shared-06-reform-meeting",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "shared-06-reform-meeting",
+    "role": "shared",
+    "title": "The Reform Meeting",
+    "text": "Workers, parents, doctors and reformers meet in a crowded hall. They discuss factory safety, child labour, cleaner streets and the need for laws.",
+    "historyNote": "Reform meetings helped spread ideas and organise pressure for change. Reformers often used evidence, speeches and petitions.",
+    "glossaryTerms": ["reform", "public meeting", "evidence"],
+    "evidence": ["Reform movements used meetings and evidence to push for better laws and conditions."],
+    "choices": [
+      {
+        "label": "Speak about factory safety.",
+        "next": "shared-09-parliament",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 2, "reform": 2 }
+      },
+      {
+        "label": "Speak about dirty water and disease.",
+        "next": "shared-07-public-health",
+        "effects": { "money": 0, "health": 1, "skills": 1, "reputation": 2, "reform": 2 }
+      },
+      {
+        "label": "Collect signatures for a petition.",
+        "next": "shared-09-parliament",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 3 }
+      }
+    ]
+  },
+  {
+    "id": "shared-07-public-health",
+    "role": "shared",
+    "title": "City Sanitation",
+    "text": "A doctor explains that dirty water can spread disease. Families want drains, clean pumps and rubbish removed from the streets.",
+    "historyNote": "Public health reform focused on sanitation, clean water and disease prevention in crowded industrial cities.",
+    "glossaryTerms": ["public health", "sanitation", "disease"],
+    "evidence": ["City sanitation became a public issue because disease spread through crowded and dirty streets."],
+    "choices": [
+      {
+        "label": "Send sanitation evidence to Parliament.",
+        "next": "shared-09-parliament",
+        "effects": { "money": 0, "health": 1, "skills": 1, "reputation": 1, "reform": 2 }
+      },
+      {
+        "label": "Organise neighbours to clean the street.",
+        "next": "shared-10-final-reflection",
+        "effects": { "money": 0, "health": 2, "skills": 1, "reputation": 2, "reform": 1 }
+      },
+      {
+        "label": "Return to the reform meeting with your findings.",
+        "next": "shared-06-reform-meeting",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "shared-08-empire-cotton",
+    "role": "shared",
+    "title": "Cotton Across Oceans",
+    "text": "A map shows cotton travelling from distant lands to British mills. The cloth in shops depends on farms, ships, ports and empire.",
+    "historyNote": "Britain's cotton industry was connected to empire and global trade. Cotton supplies linked factories to people and places far beyond Britain.",
+    "glossaryTerms": ["empire", "cotton", "global trade"],
+    "evidence": ["British industrial growth depended on global cotton supplies and overseas trade."],
+    "choices": [
+      {
+        "label": "Trace the cotton route carefully.",
+        "next": "shared-03-transport",
+        "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Ask who profits from cotton trade.",
+        "next": "shared-06-reform-meeting",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+      },
+      {
+        "label": "Use this evidence in your final judgement.",
+        "next": "shared-10-final-reflection",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 1 }
+      }
+    ]
+  },
+  {
+    "id": "shared-09-parliament",
+    "role": "shared",
+    "title": "Parliament Debates Reform",
+    "text": "Parliament hears arguments about factories, protest, sanitation and child labour. Some leaders want stronger laws. Others fear that rules will hurt business.",
+    "historyNote": "Parliament gradually passed reforms such as Factory Acts and public health measures, but change was often slow and contested.",
+    "glossaryTerms": ["Parliament", "Factory Acts", "public health"],
+    "evidence": ["Government reform grew from evidence, public pressure and debate about the costs of industrialisation."],
+    "choices": [
+      {
+        "label": "Support Factory Acts to protect workers.",
+        "next": "shared-10-final-reflection",
+        "effects": { "money": 0, "health": 1, "skills": 1, "reputation": 2, "reform": 3 }
+      },
+      {
+        "label": "Support public health laws for cleaner cities.",
+        "next": "shared-10-final-reflection",
+        "effects": { "money": 0, "health": 2, "skills": 1, "reputation": 2, "reform": 3 }
+      },
+      {
+        "label": "Argue that industry brought both benefits and harms.",
+        "next": "shared-10-final-reflection",
+        "effects": { "money": 1, "health": 0, "skills": 2, "reputation": 2, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "shared-10-final-reflection",
+    "role": "shared",
+    "title": "Final Reflection",
+    "text": "Use your evidence to answer: Was the Industrial Revolution mainly positive, mainly negative, or mixed?",
+    "historyNote": "A strong historical judgement uses evidence from different viewpoints. It explains benefits, harms and who experienced them.",
+    "glossaryTerms": ["evidence", "historical judgement", "Industrial Revolution"],
+    "evidence": ["A balanced reflection should use evidence about work, cities, transport, pollution, protest and reform."],
+    "choices": []
+  }
+]

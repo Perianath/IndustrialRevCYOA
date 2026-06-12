@@ -1,0 +1,246 @@
+[
+  {
+    "id": "owner-child-01-counting-house",
+    "role": "Mill Owner’s Child",
+    "title": "The Counting House",
+    "text": "You sit beside your father in the counting house. Ledgers show cotton bought, cloth sold and wages paid. The mill is noisy, but the accounts are neat.",
+    "historyNote": "Factory owners used capital, machinery and workers to produce goods for profit. Their decisions shaped the lives of many workers.",
+    "glossaryTerms": ["factory owner", "profit", "wages"],
+    "evidence": ["Factory ownership could bring wealth, but it depended on workers, machines and raw materials."],
+    "choices": [
+      {
+        "label": "Learn how profit is calculated.",
+        "next": "owner-child-02-profit-and-wages",
+        "effects": { "money": 2, "health": 0, "skills": 1, "reputation": 1, "reform": -1 }
+      },
+      {
+        "label": "Ask how workers' wages are decided.",
+        "next": "owner-child-02-profit-and-wages",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 0, "reform": 1 }
+      },
+      {
+        "label": "Walk onto the factory floor.",
+        "next": "owner-child-03-factory-floor",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 1 }
+      }
+    ]
+  },
+  {
+    "id": "owner-child-02-profit-and-wages",
+    "role": "Mill Owner’s Child",
+    "title": "Profit and Wages",
+    "text": "The accounts show that higher wages reduce profit. Lower wages make workers angry. Your father says a mill must stay competitive to survive.",
+    "historyNote": "Factory owners faced pressure to control costs. Wages were a major cost, and workers often had little power to demand more.",
+    "glossaryTerms": ["profit", "wages", "competition"],
+    "evidence": ["Factory profit was linked to low costs, including the wages paid to workers."],
+    "choices": [
+      {
+        "label": "Argue that wages should stay low to beat competitors.",
+        "next": "owner-child-05-competition",
+        "effects": { "money": 2, "health": 0, "skills": 0, "reputation": -1, "reform": -1 }
+      },
+      {
+        "label": "Suggest fairer wages for skilled workers.",
+        "next": "owner-child-04-child-workers",
+        "effects": { "money": -1, "health": 0, "skills": 0, "reputation": 2, "reform": 1 }
+      },
+      {
+        "label": "Ask workers what wages mean for their families.",
+        "next": "owner-child-04-child-workers",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "owner-child-03-factory-floor",
+    "role": "Mill Owner’s Child",
+    "title": "The Factory Floor",
+    "text": "Machines shake the floor. Children carry bobbins and sweep near the frames. You notice how small they look beside the moving belts and rollers.",
+    "historyNote": "Children worked in many cotton mills. Owners often valued them because they were cheap to employ and could fit around machines.",
+    "glossaryTerms": ["child labour", "cotton mill", "machinery"],
+    "evidence": ["Child labour helped keep costs low in some factories, but it exposed children to long hours and danger."],
+    "choices": [
+      {
+        "label": "Ask why children are working instead of learning.",
+        "next": "owner-child-04-child-workers",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+      },
+      {
+        "label": "Focus on how quickly the machines produce cloth.",
+        "next": "owner-child-06-investment",
+        "effects": { "money": 2, "health": 0, "skills": 1, "reputation": 0, "reform": -1 }
+      },
+      {
+        "label": "Watch for dangers on the factory floor.",
+        "next": "owner-child-08-moral-responsibility",
+        "effects": { "money": 0, "health": 1, "skills": 1, "reputation": 1, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "owner-child-04-child-workers",
+    "role": "Mill Owner’s Child",
+    "title": "Children at Work",
+    "text": "A child tells you they start before sunrise and often leave after dark. Their wage helps pay rent, but they are tired all the time.",
+    "historyNote": "Child labour was tied to poverty. Many families needed children's wages, even when the work was harmful.",
+    "glossaryTerms": ["child labour", "poverty", "long hours"],
+    "evidence": ["Children's wages supported poor families, which made reform difficult but important."],
+    "choices": [
+      {
+        "label": "Suggest shorter hours for children.",
+        "next": "owner-child-08-moral-responsibility",
+        "effects": { "money": -1, "health": 1, "skills": 0, "reputation": 2, "reform": 2 }
+      },
+      {
+        "label": "Decide the family needs their cheap labour.",
+        "next": "owner-child-05-competition",
+        "effects": { "money": 2, "health": -1, "skills": 0, "reputation": -1, "reform": -2 }
+      },
+      {
+        "label": "Ask if school and work could be balanced.",
+        "next": "owner-child-09-reform-debate",
+        "effects": { "money": -1, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "owner-child-05-competition",
+    "role": "Mill Owner’s Child",
+    "title": "Rivals Downriver",
+    "text": "A rival mill is selling cloth at a lower price. Your family worries that buyers will leave unless your mill becomes cheaper and faster.",
+    "historyNote": "Competition pushed factory owners to cut costs, invest in machinery and increase output.",
+    "glossaryTerms": ["competition", "market", "output"],
+    "evidence": ["Competition encouraged owners to seek cheaper production, sometimes at workers' expense."],
+    "choices": [
+      {
+        "label": "Cut costs by keeping wages low.",
+        "next": "owner-child-06-investment",
+        "effects": { "money": 2, "health": 0, "skills": 0, "reputation": -2, "reform": -1 }
+      },
+      {
+        "label": "Improve machinery instead of cutting wages.",
+        "next": "owner-child-06-investment",
+        "effects": { "money": 1, "health": 0, "skills": 1, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Sell better-quality cloth for a fair price.",
+        "next": "owner-child-10-ending",
+        "effects": { "money": 1, "health": 0, "skills": 1, "reputation": 2, "reform": 1 }
+      }
+    ]
+  },
+  {
+    "id": "owner-child-06-investment",
+    "role": "Mill Owner’s Child",
+    "title": "A New Machine",
+    "text": "An engineer offers a new machine that can produce cloth faster. It costs a great deal, but it may increase profit and beat rival mills.",
+    "historyNote": "Investment in machinery helped factories produce more goods. It could also reduce the need for some workers.",
+    "glossaryTerms": ["investment", "machinery", "capital"],
+    "evidence": ["Industrial growth relied on investment in machines, buildings and transport."],
+    "choices": [
+      {
+        "label": "Buy the machine and increase output.",
+        "next": "owner-child-07-empire-cotton",
+        "effects": { "money": 3, "health": 0, "skills": 1, "reputation": 1, "reform": -1 }
+      },
+      {
+        "label": "Buy it but retrain workers for new jobs.",
+        "next": "owner-child-07-empire-cotton",
+        "effects": { "money": 1, "health": 0, "skills": 2, "reputation": 2, "reform": 1 }
+      },
+      {
+        "label": "Delay the purchase and repair old machines first.",
+        "next": "owner-child-08-moral-responsibility",
+        "effects": { "money": -1, "health": 1, "skills": 1, "reputation": 1, "reform": 1 }
+      }
+    ]
+  },
+  {
+    "id": "owner-child-07-empire-cotton",
+    "role": "Mill Owner’s Child",
+    "title": "Cotton from Across the Empire",
+    "text": "Bales of raw cotton arrive at the mill. A map in the office shows trade routes across oceans. Your cloth begins with cotton grown far from Britain.",
+    "historyNote": "British cotton mills depended on global trade and empire. Cotton was connected to colonial power and, in some places, enslaved labour.",
+    "glossaryTerms": ["empire", "cotton", "global trade"],
+    "evidence": ["Factory profits in Britain were connected to cotton grown and traded across the world."],
+    "choices": [
+      {
+        "label": "Trace the cotton route and ask who benefits.",
+        "next": "owner-child-08-moral-responsibility",
+        "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 1, "reform": 2 }
+      },
+      {
+        "label": "Focus on keeping cotton supplies cheap.",
+        "next": "owner-child-05-competition",
+        "effects": { "money": 2, "health": 0, "skills": 1, "reputation": 0, "reform": -1 }
+      },
+      {
+        "label": "Write a note about empire and the mill's wealth.",
+        "next": "owner-child-09-reform-debate",
+        "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 1, "reform": 1 }
+      }
+    ]
+  },
+  {
+    "id": "owner-child-08-moral-responsibility",
+    "role": "Mill Owner’s Child",
+    "title": "A Question of Responsibility",
+    "text": "At dinner, you ask whether the mill should do more for workers. Some relatives say business is business. Others say owners have duties because they hold power.",
+    "historyNote": "Industrialisation raised moral questions about class, wealth and responsibility. Owners had more power than most workers.",
+    "glossaryTerms": ["moral responsibility", "class", "power"],
+    "evidence": ["Factory owners had choices about safety, wages and working conditions."],
+    "choices": [
+      {
+        "label": "Argue that profit should include worker safety.",
+        "next": "owner-child-09-reform-debate",
+        "effects": { "money": -1, "health": 1, "skills": 1, "reputation": 2, "reform": 2 }
+      },
+      {
+        "label": "Accept that owners should focus on profit.",
+        "next": "owner-child-10-ending",
+        "effects": { "money": 2, "health": 0, "skills": 0, "reputation": 0, "reform": -2 }
+      },
+      {
+        "label": "Suggest a school for child workers.",
+        "next": "owner-child-09-reform-debate",
+        "effects": { "money": -2, "health": 0, "skills": 1, "reputation": 2, "reform": 3 }
+      }
+    ]
+  },
+  {
+    "id": "owner-child-09-reform-debate",
+    "role": "Mill Owner’s Child",
+    "title": "Debating Reform",
+    "text": "A newspaper reports arguments over factory reform. Reformers want limits on child labour. Some owners say new laws will hurt business and reduce profit.",
+    "historyNote": "Factory reform led to laws such as the Factory Acts. These laws gradually limited child labour and improved inspection.",
+    "glossaryTerms": ["reform", "Factory Acts", "inspection"],
+    "evidence": ["Factory Acts showed that Parliament began to regulate industry because of concerns about workers and children."],
+    "choices": [
+      {
+        "label": "Support the Factory Acts.",
+        "next": "owner-child-10-ending",
+        "effects": { "money": -1, "health": 1, "skills": 1, "reputation": 2, "reform": 3 }
+      },
+      {
+        "label": "Oppose reform to protect business freedom.",
+        "next": "owner-child-10-ending",
+        "effects": { "money": 2, "health": 0, "skills": 0, "reputation": 0, "reform": -2 }
+      },
+      {
+        "label": "Argue for reform that protects children and supports families.",
+        "next": "owner-child-10-ending",
+        "effects": { "money": 0, "health": 1, "skills": 1, "reputation": 2, "reform": 3 }
+      }
+    ]
+  },
+  {
+    "id": "owner-child-10-ending",
+    "role": "Mill Owner’s Child",
+    "title": "Ending: Wealth and Responsibility",
+    "text": "Your story shows the choices facing a mill owner's child. Factory ownership could create wealth, cheap cloth and new investment. It also raised hard questions about wages, child labour, empire, competition and responsibility.",
+    "historyNote": "The Mill Owner's Child pathway shows how class shaped the Industrial Revolution. Owners had more choices and power than most workers, so their decisions mattered.",
+    "glossaryTerms": ["class", "profit", "moral responsibility"],
+    "evidence": ["Industrial wealth brought responsibility because profit often depended on workers, children and global cotton supplies."],
+    "choices": []
+  }
+]

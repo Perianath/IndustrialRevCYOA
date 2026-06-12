@@ -1,0 +1,246 @@
+[
+  {
+    "id": "engineer-01-workshop",
+    "role": "Apprentice Engineer",
+    "title": "The Workshop Door",
+    "text": "You begin as an apprentice in a busy workshop. Tools hang on the walls, iron parts cover the benches, and your master says inventions are changing Britain.",
+    "historyNote": "Apprentices learned skilled work by training with experienced workers. Engineers helped build and improve the machines of the Industrial Revolution.",
+    "glossaryTerms": ["apprentice", "engineer", "invention"],
+    "evidence": ["The Industrial Revolution created new skilled jobs for people who could design, build and repair machines."],
+    "choices": [
+      {
+        "label": "Study the drawings before touching the tools.",
+        "next": "engineer-02-flying-shuttle",
+        "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Start filing an iron part straight away.",
+        "next": "engineer-06-coal-and-iron",
+        "effects": { "money": 1, "health": 0, "skills": 1, "reputation": 0, "reform": 0 }
+      },
+      {
+        "label": "Ask which invention changed textiles first.",
+        "next": "engineer-02-flying-shuttle",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 0 }
+      }
+    ]
+  },
+  {
+    "id": "engineer-02-flying-shuttle",
+    "role": "Apprentice Engineer",
+    "title": "The Flying Shuttle",
+    "text": "Your master shows you a flying shuttle. It lets one weaver send thread across a loom much faster than before. Faster weaving creates a new problem: more thread is needed.",
+    "historyNote": "John Kay's flying shuttle, invented in 1733, sped up weaving. It increased demand for spun thread.",
+    "glossaryTerms": ["flying shuttle", "loom", "weaving"],
+    "evidence": ["The flying shuttle made weaving faster and encouraged further textile inventions."],
+    "choices": [
+      {
+        "label": "Practise explaining how the shuttle works.",
+        "next": "engineer-03-spinning-jenny",
+        "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Ask how workers reacted to faster machines.",
+        "next": "engineer-08-machines-and-workers",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 0, "reform": 1 }
+      },
+      {
+        "label": "Look for an invention that can spin more thread.",
+        "next": "engineer-03-spinning-jenny",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 0 }
+      }
+    ]
+  },
+  {
+    "id": "engineer-03-spinning-jenny",
+    "role": "Apprentice Engineer",
+    "title": "The Spinning Jenny",
+    "text": "You see a spinning jenny with many spindles. One worker can spin several threads at once. The machine looks simple, but it changes the pace of textile work.",
+    "historyNote": "James Hargreaves invented the spinning jenny in the 1760s. It helped increase the supply of thread for weaving.",
+    "glossaryTerms": ["spinning jenny", "spindle", "textiles"],
+    "evidence": ["The spinning jenny increased textile production by allowing one worker to spin many threads."],
+    "choices": [
+      {
+        "label": "Learn how the spindles turn together.",
+        "next": "engineer-04-water-frame",
+        "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Ask why some spinners disliked the machine.",
+        "next": "engineer-08-machines-and-workers",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 0, "reform": 1 }
+      },
+      {
+        "label": "Design a stronger frame for the machine.",
+        "next": "engineer-06-coal-and-iron",
+        "effects": { "money": 1, "health": 0, "skills": 2, "reputation": 1, "reform": 0 }
+      }
+    ]
+  },
+  {
+    "id": "engineer-04-water-frame",
+    "role": "Apprentice Engineer",
+    "title": "The Water Frame",
+    "text": "A water frame turns with power from a river. It spins stronger thread than the jenny. Your master says machines like this helped move textile work into factories.",
+    "historyNote": "Richard Arkwright's water frame used water power to spin strong cotton thread. It encouraged factory production near rivers.",
+    "glossaryTerms": ["water frame", "water power", "factory"],
+    "evidence": ["The water frame helped shift textile production from homes to factories powered by water."],
+    "choices": [
+      {
+        "label": "Inspect the water wheel and gears.",
+        "next": "engineer-05-steam-engine",
+        "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Ask what happens when a factory is not near a river.",
+        "next": "engineer-05-steam-engine",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Speak to workers about factory life.",
+        "next": "engineer-08-machines-and-workers",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 1 }
+      }
+    ]
+  },
+  {
+    "id": "engineer-05-steam-engine",
+    "role": "Apprentice Engineer",
+    "title": "Steam Power",
+    "text": "You stand beside a steam engine as it pumps and turns. It does not need a river. With enough coal, it can power mines, mills and transport.",
+    "historyNote": "Improved steam engines, especially those linked with James Watt, helped factories and mines use power away from rivers.",
+    "glossaryTerms": ["steam engine", "James Watt", "power"],
+    "evidence": ["Steam engines allowed industry to grow beyond places with water power."],
+    "choices": [
+      {
+        "label": "Learn how steam moves the piston.",
+        "next": "engineer-06-coal-and-iron",
+        "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Take paid work feeding coal into the engine.",
+        "next": "engineer-06-coal-and-iron",
+        "effects": { "money": 2, "health": -1, "skills": 1, "reputation": 0, "reform": 0 }
+      },
+      {
+        "label": "Imagine using steam to move vehicles.",
+        "next": "engineer-10-railways",
+        "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 1, "reform": 0 }
+      }
+    ]
+  },
+  {
+    "id": "engineer-06-coal-and-iron",
+    "role": "Apprentice Engineer",
+    "title": "Coal and Iron",
+    "text": "The ironworks glows with heat. Coal fires help make iron for machines, rails, bridges and tools. The work is skilled, hot and risky.",
+    "historyNote": "Coal and iron were key resources of the Industrial Revolution. Coal supplied power and heat, while iron supplied strong materials.",
+    "glossaryTerms": ["coal", "iron", "ironworks"],
+    "evidence": ["Coal and iron supported machine building, steam power, factories and transport."],
+    "choices": [
+      {
+        "label": "Learn how iron parts are cast.",
+        "next": "engineer-07-canals",
+        "effects": { "money": 1, "health": -1, "skills": 2, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Record how smoke affects workers nearby.",
+        "next": "engineer-08-machines-and-workers",
+        "effects": { "money": 0, "health": -1, "skills": 1, "reputation": 0, "reform": 2 }
+      },
+      {
+        "label": "Ask how heavy coal and iron are transported.",
+        "next": "engineer-07-canals",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 0 }
+      }
+    ]
+  },
+  {
+    "id": "engineer-07-canals",
+    "role": "Apprentice Engineer",
+    "title": "The Canal Wharf",
+    "text": "At the canal wharf, barges carry coal, iron and cotton. A horse pulls a heavy load along the towpath. Water transport makes bulky goods cheaper to move.",
+    "historyNote": "Canals helped move heavy goods before railways became common. They linked mines, factories, ports and towns.",
+    "glossaryTerms": ["canal", "barge", "towpath"],
+    "evidence": ["Canals lowered transport costs and helped connect industrial places."],
+    "choices": [
+      {
+        "label": "Map the route from mine to factory.",
+        "next": "engineer-09-transport-change",
+        "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Work out how to move goods faster.",
+        "next": "engineer-10-railways",
+        "effects": { "money": 1, "health": 0, "skills": 2, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Ask canal workers if they fear railways.",
+        "next": "engineer-09-transport-change",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 1 }
+      }
+    ]
+  },
+  {
+    "id": "engineer-08-machines-and-workers",
+    "role": "Apprentice Engineer",
+    "title": "Machines and Workers",
+    "text": "Some workers admire the new machines. Others worry that machines will lower wages or replace skilled work. You realise inventions affect people as well as production.",
+    "historyNote": "Industrial inventions increased output, but they could also disrupt older jobs and create difficult factory conditions.",
+    "glossaryTerms": ["mechanisation", "wages", "skilled work"],
+    "evidence": ["New machines brought progress for industry but uncertainty for many workers."],
+    "choices": [
+      {
+        "label": "Design machines that are safer to use.",
+        "next": "engineer-09-transport-change",
+        "effects": { "money": 0, "health": 1, "skills": 2, "reputation": 2, "reform": 2 }
+      },
+      {
+        "label": "Focus only on making machines faster.",
+        "next": "engineer-10-railways",
+        "effects": { "money": 2, "health": 0, "skills": 2, "reputation": 0, "reform": -1 }
+      },
+      {
+        "label": "Listen to workers before changing a machine.",
+        "next": "engineer-09-transport-change",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 2, "reform": 1 }
+      }
+    ]
+  },
+  {
+    "id": "engineer-09-transport-change",
+    "role": "Apprentice Engineer",
+    "title": "Changing Transport",
+    "text": "Roads, canals and steam power are changing how goods move. A factory owner wants faster transport from coalfields to mills and ports.",
+    "historyNote": "Better transport helped industrialisation by moving raw materials and finished goods more quickly and cheaply.",
+    "glossaryTerms": ["transport", "raw materials", "markets"],
+    "evidence": ["Transport improvements helped factories obtain materials and sell goods in wider markets."],
+    "choices": [
+      {
+        "label": "Improve canal loading equipment.",
+        "next": "engineer-10-railways",
+        "effects": { "money": 1, "health": 0, "skills": 2, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Study plans for a steam railway.",
+        "next": "engineer-10-railways",
+        "effects": { "money": 0, "health": 0, "skills": 2, "reputation": 1, "reform": 0 }
+      },
+      {
+        "label": "Ask who benefits and who loses from faster transport.",
+        "next": "engineer-10-railways",
+        "effects": { "money": 0, "health": 0, "skills": 1, "reputation": 1, "reform": 2 }
+      }
+    ]
+  },
+  {
+    "id": "engineer-10-railways",
+    "role": "Apprentice Engineer",
+    "title": "Rails and Locomotives",
+    "text": "A locomotive stands on iron rails. It can move goods and passengers faster than horses or canals. People cheer, but some worry about noise, accidents and lost jobs.",
+    "historyNote": "Railways became a major transport innovation. They used steam engines, coal and iron to connect cities, ports, mines and factories.",
+    "glossaryTerms": ["railway", "locomotive", "steam power"],
+    "evidence": ["Railways showed how inventions, coal, iron and transport worked together to change Britain."],
+    "choices": []
+  }
+]
